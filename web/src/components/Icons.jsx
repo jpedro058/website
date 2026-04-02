@@ -1,0 +1,29 @@
+export default function Icon({ type, size = 18 }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="white"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      {type === "instagram" && (
+        <>
+          <rect x="2" y="2" width="20" height="20" rx="5" />
+          <circle cx="12" cy="12" r="4" />
+          <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none" />
+        </>
+      )}
+
+      {type === "store" && (
+        <>
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />{" "}
+          <line x1="3" y1="6" x2="21" y2="6" /> <path d="M16 10a4 4 0 01-8 0" />
+        </>
+      )}
+    </svg>
+  );
+}
